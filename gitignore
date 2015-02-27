@@ -1,0 +1,21 @@
+# adapted from https://github.com/github/gitignore
+
+# Compiled source #
+###################
+*.pyc
+
+
+# OS generated files #
+######################
+.DS_Store
+*~
+
+
+# IDE generated files #
+#######################
+.idea
+.ant-targets-build.xml
+.ant_targets
+[#]*[#]
+*.sublime-project
+*.sublime-workspace

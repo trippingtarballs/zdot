@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+# http://bower.io/#uninstalling-packages
+alias bower="noglob bower"
+
+# http://dave.cheney.net/2011/08/08/os-x-has-a-built-in-wifi-scanner ..... $ airport -s
+alias airport=/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport
+
+alias l="ls -lAh"
+
+# https://wiki.videolan.org/Mac_OS_X/#Command_line
+alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"

@@ -1,0 +1,44 @@
+[user]
+    name = Rajiv Bose
+    email = rajiv@lesbose.com
+
+[color]
+    ui = always
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+
+[core]
+    editor = emacs
+    excludesfile = /Users/rbose85/.gitignore
+    autocrlf = false
+    safecrlf = true
+
+[credential]
+    helper = osxkeychain
+
+[github]
+    user = rbose85
+
+[alias]
+    log-compact = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+    log-verbose = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+    serve = daemon --verbose --export-all --base-path=.git --enable=upload-archive --enable=receive-pack --reuseaddr --strict-paths .git/
+    url = config --get remote.origin.url
+
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+[push]
+    default = simple
