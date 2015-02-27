@@ -12,10 +12,10 @@ local current_dir=${PWD/#$HOME/~}
 
 # Git info.
 local git_info=$(git_prompt_info)
-export ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[white]%}on%{$reset_color%} git:%{$fg[cyan]%}"
-export ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-export ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}x"
-export ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}o"
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[white]%}on%{$reset_color%} git:%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}x"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}o"
 
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
