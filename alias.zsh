@@ -1,10 +1,11 @@
 #!/usr/bin/env zsh
 
-# http://bower.io/#uninstalling-packages
-alias bower="noglob bower"
 
 # http://dave.cheney.net/2011/08/08/os-x-has-a-built-in-wifi-scanner ..... $ airport -s
 alias airport=/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport
+
+# http://bower.io/#uninstalling-packages
+alias bower="noglob bower"
 
 alias l="ls -lAh"
 
