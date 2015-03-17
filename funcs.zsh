@@ -1,5 +1,31 @@
 #!/usr/bin/env zsh
 
+
+#### FOR SHELL STARTUP ####
+warning-message () {
+    printf "\n\t WARNING: %s \n" "$1"
+    echo -n "Press [Enter] key to continue ..." && read
+}
+ensure-file () {
+    [ -r "$1" ] || { warning-message "Unable to locate file, $1"; }
+}
+ensure-folder () {
+    [ -d "$1" ] || { warning-message "Unable to locate folder, $1"; }
+}
+ensure-sym-link () {
+    [ -h "$1" ] || { warning-message "Possible broken sym-link, $1"; }
+    [ -s "$1" ] || { warning-message "Possible broken sym-link, $1"; }
+}
+#### ################# ####
+
+jim2x () {
+    cd ~/Code/commercial/mnetics/IM2X-Client/IM2X-Shell
+}
+jles () {
+    cd ~/Code/commercial/daredev/lesEssence
+}
+
+
 f () {
     # look for file by name
     sudo find -x . -name "$1" -not -path "*/.MobileBackups/*" ;
@@ -85,24 +111,4 @@ remove-xattrs () {
     done
 
     # xattr "$1" | xargs -I {} xattr -d {} "$1"
-}
-
-#### FOR SHELL STARTUP ####
-
-warning-message () {
-    printf "\n\t WARNING: %s \n" "$1"
-    echo -n "Press [Enter] key to continue ..." && read
-}
-
-ensure-file () {
-    [ -r "$1" ] || { warning-message "Unable to locate file, $1"; }
-}
-
-ensure-folder () {
-    [ -d "$1" ] || { warning-message "Unable to locate folder, $1"; }
-}
-
-ensure-sym-link () {
-    [ -h "$1" ] || { warning-message "Possible broken sym-link, $1"; }
-    [ -s "$1" ] || { warning-message "Possible broken sym-link, $1"; }
 }
