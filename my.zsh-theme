@@ -8,7 +8,7 @@ function box_name {
 }
 
 # Directory info.
-local current_dir=${PWD/#$HOME/~}
+local current_dir='${PWD/#$HOME/~}'
 
 # VCS
 YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
@@ -47,7 +47,7 @@ PROMPT="
 %{$fg[white]%}at \
 %{$fg[green]%}$(box_name) \
 %{$fg[white]%}in \
-%{$fg[yellow]%}${current_dir}%{$reset_color%}\
+%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
 ${git_info} \
 %{$fg[white]%}[%*]
