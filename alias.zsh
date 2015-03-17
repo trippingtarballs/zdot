@@ -7,6 +7,8 @@ alias airport=/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/
 # http://bower.io/#uninstalling-packages
 alias bower="noglob bower"
 
+alias grep="grep -H --color"
+
 alias l="ls -lAh"
 
 # https://wiki.videolan.org/Mac_OS_X/#Command_line
