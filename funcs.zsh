@@ -109,6 +109,4 @@ remove-xattrs () {
     do
         xattr "$file" | xargs -I {} xattr -d {} "$file"
     done
-
-    # xattr "$1" | xargs -I {} xattr -d {} "$1"
 }
