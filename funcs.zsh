@@ -19,10 +19,6 @@ feed-me () {
     (alias | cut -f1 -d= ; hash -f; hash -v | cut -f 1 -d= ; typeset +f) | sort
 }
 
-g () {
-    sudo grep -r -H --color "$1" ./ ;
-}
-
 
 # npm requires a number of files to be open, simultaneously
 npm-init () {
