@@ -13,3 +13,5 @@ alias l="ls -lAh"
 
 # https://wiki.videolan.org/Mac_OS_X/#Command_line
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
+
+alias zsh-time="time zsh -i -c exit"
