@@ -4,6 +4,9 @@
 ###################
 *.pyc
 
+# NVM related #
+###############
+.nvmrc
 
 # OS generated files #
 ######################
