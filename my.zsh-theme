@@ -40,10 +40,13 @@ ys_hg_prompt_info() {
     fi
 }
 
+# NVM info.
+local nvm_info='$(nvm_ls_current)'
+
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-${nvm_prompt_info} \
+(${nvm_info}) \
 %{$fg[cyan]%}%n \
 %{$fg[white]%}at \
 %{$fg[green]%}$(box_name) \
