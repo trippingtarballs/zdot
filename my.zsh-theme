@@ -10,7 +10,7 @@ function box_name {
 # Directory info.
 local current_dir='${PWD/#$HOME/~}'
 
-# VCS
+# VCS info.
 YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
 YS_VCS_PROMPT_PREFIX2=":%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
@@ -24,7 +24,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="$YS_VCS_PROMPT_SUFFIX"
 ZSH_THEME_GIT_PROMPT_DIRTY="$YS_VCS_PROMPT_DIRTY"
 ZSH_THEME_GIT_PROMPT_CLEAN="$YS_VCS_PROMPT_CLEAN"
 
-# HG info
+# HG info.
 local hg_info='$(ys_hg_prompt_info)'
 ys_hg_prompt_info() {
     # make sure this is a hg dir
