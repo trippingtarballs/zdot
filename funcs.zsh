@@ -18,13 +18,6 @@ ensure-sym-link () {
 }
 #### ################# ####
 
-jim2x () {
-    cd ~/Code/commercial/mnetics/IM2X-Client/IM2X-Shell
-}
-jles () {
-    cd ~/Code/commercial/daredev/lesEssence
-}
-
 
 f () {
     # look for file by name
