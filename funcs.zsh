@@ -41,9 +41,6 @@ feed-me () {
 
 # npm requires a number of files to be open, simultaneously
 npm-init () {
-    # https://github.com/gruntjs/grunt-contrib-copy/issues/21
-    ulimit -n 2560
-
     local msg="Is 'npm' installed? Hint: http://nodejs.org/download/"
     npm --version &> /dev/null || { echo "$msg" ; return ; }
 }
