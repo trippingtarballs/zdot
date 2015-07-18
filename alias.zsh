@@ -15,9 +15,3 @@ alias l="ls -lAh"
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 alias zsh-time="time zsh -i -c exit"
-
-
-alias jim2x="cd ~/Code/commercial/mnetics/IM2X-Client/IM2X-Shell && nvm use"
-alias jiwazat="cd ~/Code/commercial/iwazat/iwazat && nvm use"
-alias jiiwazat-ionic="cd ~/Code/commercial/iwazat/iwazat-ionic-app && nvm use"
-alias jles="cd ~/Code/commercial/daredev/lesEssence"
