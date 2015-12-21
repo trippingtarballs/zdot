@@ -21,7 +21,7 @@ ensure-sym-link () {
 
 f () {
     # look for file by name
-    sudo find -x . -name "$1" -not -path "*/.MobileBackups/*" ;
+    sudo find -x . -not -path "*/.MobileBackups/*" -name "$1"
 }
 f-broken () {
     # look for broken symlinks
