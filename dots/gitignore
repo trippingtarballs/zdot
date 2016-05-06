@@ -4,9 +4,10 @@
 ###################
 *.pyc
 
-# NVM related #
+# NPM related #
 ###############
 .nvmrc
+npm-debug.log
 
 # OS generated files #
 ######################

@@ -3,9 +3,9 @@
 
 # ALL THE SOFTWARE TINGS
 
-# what's the plurarl of 'alias'?
-alias jiwazat="cd ~/Code/commercial/iwazat/projects-legacy/iwazat && nvm use"
-alias jiiwazat="cd ~/Code/commercial/iwazat/projects-legacy/iwazat-ionic-app && nvm use"
-alias jtt3iwazat="cd ~/Code/commercial/iwazat/projects-t3/hybrid-app && nvm use"
+# global vars
 
-alias jles="cd ~/Code/commercial/daredev/lesEssence && nvm use"
+
+# what's the plurarl of 'alias'?
+alias jles="cd ~/Code/commercial/daredev/lesEssence && lnvm"
+alias jfull="cd ~/Code/commercial/arcadiagroup/full-monty && lnvm"

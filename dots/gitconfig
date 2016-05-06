@@ -37,8 +37,7 @@
     serve = daemon --verbose --export-all --base-path=.git --enable=upload-archive --enable=receive-pack --reuseaddr --strict-paths .git/
     url = config --get remote.origin.url
 
-[filter "media"]
-    clean = git-media-clean %f
-    smudge = git-media-smudge %f
 [push]
     default = simple
+
+# EOF

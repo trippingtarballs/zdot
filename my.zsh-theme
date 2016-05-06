@@ -41,7 +41,7 @@ ys_hg_prompt_info() {
 }
 
 # NVM info.
-local nvm_info='$(nvm_ls_current)'
+local nvm_info='$(nvm_prompt_info)'
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
