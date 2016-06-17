@@ -7,5 +7,5 @@
 
 
 # what's the plurarl of 'alias'?
-alias jles="cd ~/Code/commercial/daredev/lesEssence && lnvm"
-alias jfull="cd ~/Code/commercial/arcadiagroup/full-monty && lnvm"
+alias jles="cd ~/Code/commercial/daredev/lesEssence && nvml"
+alias jfull="cd ~/Code/commercial/arcadiagroup/full-monty && nvml"

@@ -4,6 +4,8 @@
 # http://dave.cheney.net/2011/08/08/os-x-has-a-built-in-wifi-scanner ..... $ airport -s
 alias airport=/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport
 
+alias basher="env - /usr/local/bin/bash"
+
 # http://bower.io/#uninstalling-packages
 # alias bower="noglob bower"
 
@@ -15,3 +17,5 @@ alias l="ls -lAh"
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 alias zsh-time="time zsh -i -c exit"
+
+alias yt="youtube-dl --format mp4"
