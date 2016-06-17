@@ -19,7 +19,7 @@ feed-me () {
 }
 
 # nvm loader
-lnvm () {
+nvml () {
     export NVM_DIR=~/.nvm
     source ~/.nvm/nvm.sh
 }
@@ -52,4 +52,10 @@ remove-xattrs () {
     do
         xattr "$file" | xargs -I {} xattr -d {} "$file"
     done
+}
+
+# VS Code
+code () {
+    VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
+    export VSCODE_TSJS=1;
 }
