@@ -44,7 +44,7 @@ else
     # A N D R O I D
     export ANDROID_HOME=/usr/local/opt/android-sdk
 
-    # A M A Z O N W E B S E R V I C E S
+    # A M A Z O N W E B S E R V I C E S
     source /usr/local/share/zsh/site-functions/_aws
 
     # G O O G L E C L O U D S D K
