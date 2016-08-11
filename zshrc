@@ -19,7 +19,7 @@ if ! zgen saved; then
     # plugins
     # zgen oh-my-zsh plugins/colored-man
     zgen oh-my-zsh plugins/docker
-    zgen oh-my-zsh plugins/docker-compose
+    # zgen oh-my-zsh plugins/docker-compose
     # zgen oh-my-zsh plugins/nvm
     # zgen oh-my-zsh plugins/pip
     # zgen oh-my-zsh plugins/virtualenvwrapper
@@ -44,23 +44,15 @@ else
     # A N D R O I D
     export ANDROID_HOME=/usr/local/opt/android-sdk
 
-    # A M A Z O N W E B S E R V I C E S
-    source /usr/local/share/zsh/site-functions/_aws
-
-    # G O O G L E C L O U D S D K
-    # source '/Users/rbose85/.gcloud-sdk/path.zsh.inc'       # update PATH gcloud SDK
-    # path=(/Users/rbose85/.gcloud-sdk/bin $path)
-    # source '/Users/rbose85/.gcloud-sdk/completion.zsh.inc' # command completion
-
     # G O L A N G
     export GOPATH=$HOME/.golang
     export GOROOT=$(brew --prefix golang)/libexec
     path=($path $GOPATH/bin $GOROOT/bin)
 
     # load libraries
-    source ~/Code/opensrc/zdot/alias.zsh
-    source ~/Code/opensrc/zdot/funcs.zsh
-    source ~/Code/opensrc/zdot/devel.zsh
+    source ~/Code/personal/zdot/alias.zsh
+    source ~/Code/personal/zdot/funcs.zsh
+    source ~/Code/personal/zdot/devel.zsh
 fi
 
 # EOF

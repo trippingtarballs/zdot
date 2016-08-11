@@ -18,11 +18,6 @@ feed-me () {
     (alias | cut -f1 -d= ; hash -f; hash -v | cut -f 1 -d= ; typeset +f) | sort
 }
 
-# nvm loader
-nvml () {
-    export NVM_DIR=~/.nvm
-    source ~/.nvm/nvm.sh
-}
 
 # http://ijoshsmith.com/2013/10/29/view-hidden-files-and-directories-with-finder-in-os-x-mavericks/
 toggle-hidden-files () {
@@ -58,4 +53,30 @@ remove-xattrs () {
 code () {
     VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
     export VSCODE_TSJS=1;
+}
+
+
+git-tag () {
+    git tag -l | xargs git tag -d && git fetch -t
+}
+
+
+# LOADERS
+##########
+
+nvml () {
+    export NVM_DIR=~/.nvm
+    source ~/.nvm/nvm.sh
+}
+
+awsl () {
+    # A M A Z O N W E B S E R V I C E S
+    source /usr/local/share/zsh/site-functions/_aws
+}
+
+gcloudl () {
+    # G O O G L E C L O U D S D K
+    source '/Users/rbose85/.gcloud-sdk/path.zsh.inc'       # update PATH gcloud SDK
+    path=(/Users/rbose85/.gcloud-sdk/bin $path)
+    source '/Users/rbose85/.gcloud-sdk/completion.zsh.inc' # command completion
 }
