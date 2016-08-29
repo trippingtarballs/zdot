@@ -17,7 +17,7 @@ if ! zgen saved; then
     zgen oh-my-zsh
 
     # plugins
-    # zgen oh-my-zsh plugins/colored-man
+    zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/docker
     # zgen oh-my-zsh plugins/docker-compose
     # zgen oh-my-zsh plugins/nvm
@@ -32,14 +32,19 @@ if ! zgen saved; then
     # save all to init script
     zgen save
 else
+    # globals
+    export ARCHFLAGS="-arch x86_64"
+    export LANG=en_GB.UTF-8
+
+    # H U B - https://hub.github.com
+    export GITHUB_USER=rbose85
+    export GITHUB_TOKEN=
+    export HOMEBREW_GITHUB_API_TOKEN=$GITHUB_TOKEN
+
     # H O M E B R E W
     path=("${(@)path:#'/usr/local/bin'}")
     path=("${(@)path:#'/opt/X11/bin'}")
     path=(/usr/local/bin /usr/local/sbin $path)
-
-    # globals
-    export ARCHFLAGS="-arch x86_64"
-    export LANG=en_GB.UTF-8
 
     # A N D R O I D
     export ANDROID_HOME=/usr/local/opt/android-sdk
