@@ -66,6 +66,8 @@ git-tag () {
 
 nvml () {
     export NVM_DIR=~/.nvm
+
+    # hint: $ ln -s $(brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
     source ~/.nvm/nvm.sh
 }
 
