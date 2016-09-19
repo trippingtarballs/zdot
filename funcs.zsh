@@ -72,6 +72,8 @@ nvml () {
 awsl () {
     # A M A Z O N W E B S E R V I C E S
     source /usr/local/share/zsh/site-functions/_aws
+    export AWS_ROOT_OATH_KEY=<inser-key>
+    alias aws-iotp="oathtool --totp --base32 ${AWS_ROOT_OATH_KEY}"
 }
 
 gcloudl () {
