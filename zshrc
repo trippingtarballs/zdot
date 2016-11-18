@@ -4,7 +4,8 @@
 # NOTES:
 #   $ zgen update && zgen reset
 #   $ zsh-time
-#   zsh -i -c exit  0.15s user 0.11s system 97% cpu 0.276 total
+#   zsh -i -c exit  0.04s user 0.04s system 95% cpu 0.075 total # default
+#   zsh -i -c exit  0.36s user 0.21s system 98% cpu 0.585 total
 
 
 # load zgen
