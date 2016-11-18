@@ -76,6 +76,15 @@ nvml () {
     source ~/.nvm/nvm.sh
 }
 
+nvmu () {
+    nvml
+    nvm install node --reinstall-packages-from=`nvm current`
+    nvm alias default `nvm current`
+    cd ~/.nvm/versions
+    ln -sfn node/`nvm current` default
+    cd -
+}
+
 awsl () {
     # A M A Z O N W E B S E R V I C E S
     source /usr/local/share/zsh/site-functions/_aws
