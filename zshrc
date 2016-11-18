@@ -25,6 +25,7 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/pip
     # zgen oh-my-zsh plugins/virtualenvwrapper
 
+    zgen load lukechilds/zsh-better-npm-completion
     zgen load zsh-users/zsh-syntax-highlighting
 
     # theme
