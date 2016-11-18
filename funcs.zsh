@@ -41,6 +41,11 @@ toggle-drop-shadow () {
     defaults write com.apple.screencapture disable-shadow "$new"
 }
 
+# http://apple.stackexchange.com/a/212694
+toggle-bezels-off () {
+    launchctl unload -F /System/Library/LaunchAgents/com.apple.BezelUI.plist
+}
+
 # http://stackoverflow.com/a/19458175
 remove-xattrs () {
     for file in "$@"
