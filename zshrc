@@ -40,7 +40,7 @@ else
 
     # H U B - https://hub.github.com
     export GITHUB_USER=rbose85
-    export GITHUB_TOKEN=
+    export GITHUB_TOKEN=<inser-key>
     export HOMEBREW_GITHUB_API_TOKEN=$GITHUB_TOKEN
 
     # H O M E B R E W
