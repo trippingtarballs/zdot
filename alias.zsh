@@ -9,7 +9,7 @@ alias basher="env - /usr/local/bin/bash"
 # http://bower.io/#uninstalling-packages
 # alias bower="noglob bower"
 
-alias grep="grep -H --color"
+alias g="grep -H --color"
 
 alias l="ls -lAh"
 
@@ -19,3 +19,4 @@ alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 alias zsh-time="time zsh -i -c exit"
 
 alias yt="youtube-dl --format mp4"
+alias yta="yt --extract-audio --audio-quality 0"

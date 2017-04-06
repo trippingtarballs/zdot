@@ -55,11 +55,7 @@ remove-xattrs () {
 }
 
 # VS Code
-code () {
-    VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
-    export VSCODE_TSJS=1;
-}
-
+# https://code.visualstudio.com/docs/setup/mac#_command-line
 
 git-tag () {
     git tag -l | xargs git tag -d && git fetch -t
@@ -69,11 +65,18 @@ git-tag () {
 # LOADERS
 ##########
 
+yrn () {
+    yarn $@ --no-lockfile
+}
+
 nvml () {
     export NVM_DIR=~/.nvm
 
     # hint: $ ln -s $(brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
     source ~/.nvm/nvm.sh
+
+    # thought about conditionally setting `yrn` - eaiser to always be present
+    # command -v yarn >/dev/null 2>&1 && { yrn () { yarn $@ --no-lockfile } }
 }
 
 nvmu () {
@@ -88,8 +91,9 @@ nvmu () {
 awsl () {
     # A M A Z O N W E B S E R V I C E S
     source /usr/local/share/zsh/site-functions/_aws
-    export AWS_ROOT_OATH_KEY=<inser-key>
+    export AWS_ROOT_OATH_KEY=<insert-key>
     alias aws-iotp="oathtool --totp --base32 ${AWS_ROOT_OATH_KEY}"
+    export AWS_DEFAULT_PROFILE=arcadia.digital
 }
 
 gcloudl () {
