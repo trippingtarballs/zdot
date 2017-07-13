@@ -46,6 +46,20 @@ toggle-bezels-off () {
     launchctl unload -F /System/Library/LaunchAgents/com.apple.BezelUI.plist
 }
 
+# https://mac-how-to.gadgethacks.com/how-to/change-default-save-location-screenshots-mac-os-x-for-cleaner-desktop-0160154/
+toggle-screenshot () {
+    local prefered="$HOME/Screenshots"
+    local standard="$HOME/Desktop"
+    local selected=$(defaults read com.apple.screencapture location)
+
+    local next
+    [[ "$selected" == "$standard" ]] && next="$prefered" || next="$standard"
+
+    defaults write com.apple.screencapture location "$next"
+
+    killall SystemUIServer
+}
+
 # http://stackoverflow.com/a/19458175
 remove-xattrs () {
     for file in "$@"
