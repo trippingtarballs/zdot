@@ -83,25 +83,6 @@ yrn () {
     yarn $@ --no-lockfile
 }
 
-nvml () {
-    export NVM_DIR=~/.nvm
-
-    # hint: $ ln -s $(brew --prefix nvm)/nvm.sh ~/.nvm/nvm.sh
-    source ~/.nvm/nvm.sh
-
-    # thought about conditionally setting `yrn` - eaiser to always be present
-    # command -v yarn >/dev/null 2>&1 && { yrn () { yarn $@ --no-lockfile } }
-}
-
-nvmu () {
-    nvml
-    nvm install node --reinstall-packages-from=`nvm current`
-    nvm alias default `nvm current`
-    cd ~/.nvm/versions
-    ln -sfn node/`nvm current` default
-    cd -
-}
-
 awsl () {
     # A M A Z O N W E B S E R V I C E S
     source /usr/local/share/zsh/site-functions/_aws
