@@ -19,4 +19,5 @@ alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 alias zsh-time="time zsh -i -c exit"
 
 alias yt="youtube-dl --format mp4"
+alias yti="youtube-dl --format mp4 --output \"%(autonumber)s-%(title)s.%(ext)s\""
 alias yta="yt --extract-audio --audio-quality 0"
