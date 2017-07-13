@@ -6,11 +6,11 @@ f () {
 }
 f-broken () {
     # look for broken symlinks
-    sudo find . -type l -exec sh -c "file -b {} | grep -q ^broken" \; -print
+    sudo find -x . -type l -exec sh -c "file -b {} | grep -q ^broken" \; -print
 }
 f-symlink () {
     # look for all symlinks in $HOME
-    sudo find . -not -path "/.MobileBackups/*" -type l ;
+    sudo find -x . -not -path "*/.MobileBackups/*" -type l
 }
 
 feed-me () {
