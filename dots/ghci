@@ -1,1 +1,11 @@
-:set prompt "ghci> "
+-- :set prompt "ghci> "
+-- :set prompt "λ> "
+
+-- colourful prompt
+:set prompt "\ESC[34m\STX%s > \ESC[m\STX"
+
+-- warning for partial functions
+:set -Wall
+
+-- more polymorphic function signatures
+:set -XNoMonomorphismRestriction

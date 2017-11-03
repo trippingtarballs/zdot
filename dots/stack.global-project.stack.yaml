@@ -1,0 +1,5 @@
+flags: {}
+extra-package-dbs: []
+packages: []
+extra-deps: []
+resolver: ghc-8.2.1

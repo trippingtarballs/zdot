@@ -8,13 +8,14 @@
 
 # what's the plurarl of 'alias'?
 alias jles="cd ~/Code/commercial/daredev/lesEssence"
-alias jfull="cd ~/Code/commercial/arcadiagroup/full-monty"
+alias jfull="cd ~/Code/commercial/arcadiagroup/full-monty && nvml"
 alias jmono="cd ~/Code/commercial/arcadiagroup/mono-monty"
 alias jv2="cd ~/Code/commercial/arcadiagroup/monty-idd"
 alias jngapp="cd ~/Code/commercial/daredev/NGApp"
 
 alias jelm="cd ~/Code/examples/_elm/elm-playgroud"
-alias jreason="cd ~/Code/examples/_reason/reason-app-react"
+alias jhaskell="cd ~/Code/examples/_haskell/learnyou"
+alias jreason="cd ~/Code/tutorial/a-reason-react-tutorial"
 
 
 # ssh-shotcuts

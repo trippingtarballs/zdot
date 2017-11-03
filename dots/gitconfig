@@ -1,9 +1,9 @@
 [user]
     name = Rajiv Bose
-    email = rbose85@users.noreply.github.com
+    email = trippingtarballs@users.noreply.github.com
 
 [color]
-    ui = always
+    ui = auto
 [color "branch"]
     current = yellow bold
     local = green bold
@@ -29,7 +29,7 @@
     helper = osxkeychain
 
 [github]
-    user = rbose85
+    user = trippingtarballs
 
 [alias]
     log-compact = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative

@@ -2,7 +2,7 @@
 
 f () {
     # look for file by name
-    sudo find -x . -not -path "*/.MobileBackups/*" -name "$1"
+    sudo find -x . -not -path "*/.MobileBackups/*" -not -path "*/node_modules/*" -name "$1"
 }
 f-broken () {
     # look for broken symlinks
@@ -68,26 +68,21 @@ remove-xattrs () {
     done
 }
 
-# VS Code
-# https://code.visualstudio.com/docs/setup/mac#_command-line
-
 git-tag () {
     git tag -l | xargs git tag -d && git fetch -t
+}
+
+git-clean () {
+    rm -rf .git/gc.log && git gc --aggressive --prune=now && git fsck
 }
 
 
 # LOADERS
 ##########
 
-yrn () {
-    yarn $@ --no-lockfile
-}
-
 awsl () {
     # A M A Z O N W E B S E R V I C E S
     source /usr/local/share/zsh/site-functions/_aws
-    export AWS_ROOT_OATH_KEY=<insert-key>
-    alias aws-iotp="oathtool --totp --base32 ${AWS_ROOT_OATH_KEY}"
     export AWS_DEFAULT_PROFILE=arcadia.digital
 }
 
@@ -98,6 +93,6 @@ gcloudl () {
     source '/Users/rbose85/.gcloud-sdk/completion.zsh.inc' # command completion
 }
 
-opaml () {
-    . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-}
+# opaml () {
+#     . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# }
