@@ -42,12 +42,12 @@ if ! zgen saved; then
 
     # zgen load lukechilds/zsh-better-npm-completion
     zgen load zsh-users/zsh-syntax-highlighting
-    # zgen load rbose85/zdot plugins/docker
-    # zgen load rbose85/zdot plugins/docker-compose
-    # zgen load rbose85/zdot plugins/docker-machine
+    # zgen load trippingtarballs/zdot plugins/docker
+    # zgen load trippingtarballs/zdot plugins/docker-compose
+    # zgen load trippingtarballs/zdot plugins/docker-machine
 
     # theme
-    zgen load rbose85/zdot themes/my
+    zgen load trippingtarballs/zdot themes/my
 
     # save all to init script
     zgen save
@@ -58,13 +58,13 @@ else
 
     # H U B - https://hub.github.com
     export GITHUB_USER=trippingtarballs
-    export GITHUB_TOKEN=<insert-key>
+    export GITHUB_TOKEN="<insert-key>"
 
     # H O M E B R E W
     path=("${(@)path:#'/usr/local/bin'}")
     path=("${(@)path:#'/opt/X11/bin'}")
     path=(/usr/local/bin /usr/local/sbin $path)
-    export HOMEBREW_GITHUB_API_TOKEN=<insert-key>
+    export HOMEBREW_GITHUB_API_TOKEN="<insert-key>"
 
     # N O D E V E R S I O N M A N A G E R
     export NVM_DIR="$HOME/.nvm"
@@ -82,7 +82,7 @@ else
     path=($path $HOME/.local/bin)
 
     # O P A M (OCaml pkg manager)
-    # source /Users/rbose85/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+    # source ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
     # load libraries
     source ~/Code/personal/zdot/alias.zsh
