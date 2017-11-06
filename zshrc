@@ -23,7 +23,7 @@ export SAVEHIST=100000
 # upgrade_oh_my_zsh
 
 # load zgen
-source ~/Code/opensrc/zgen/zgen.zsh
+source ~/Code/personal/zgen/zgen.zsh
 
 # check if there's no init script
 if ! zgen saved; then

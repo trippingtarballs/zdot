@@ -1,6 +1,6 @@
 [user]
     name = Rajiv Bose
-    email = trippingtarballs@users.noreply.github.com
+    email = rajiv@git.lesbose.com
 
 [color]
     ui = auto
@@ -21,7 +21,7 @@
 
 [core]
     editor = emacs
-    excludesfile = /Users/rbose85/.gitignore
+    excludesfile = ~/.gitignore
     autocrlf = false
     safecrlf = true
 

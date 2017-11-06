@@ -88,9 +88,9 @@ awsl () {
 
 gcloudl () {
     # G O O G L E C L O U D S D K
-    source '/Users/rbose85/.gcloud-sdk/path.zsh.inc'       # update PATH gcloud SDK
-    path=(/Users/rbose85/.gcloud-sdk/bin $path)
-    source '/Users/rbose85/.gcloud-sdk/completion.zsh.inc' # command completion
+    source '~/.gcloud-sdk/path.zsh.inc'       # update PATH gcloud SDK
+    path=(~/.gcloud-sdk/bin $path)
+    source '~/.gcloud-sdk/completion.zsh.inc' # command completion
 }
 
 # opaml () {
