@@ -62,19 +62,6 @@ else
     export ARCHFLAGS="-arch x86_64"
     export LANG=en_GB.UTF-8
 
-    # H U B - https://hub.github.com
-    export GITHUB_USER=trippingtarballs
-    export GITHUB_TOKEN="<insert-key>"
-
-    # H O M E B R E W
-    export HOMEBREW_GITHUB_API_TOKEN="<insert-key>"
-    path=("${(@)path:#'/usr/local/bin'}")
-    path=("${(@)path:#'/opt/X11/bin'}")
-    path=(/usr/local/bin /usr/local/sbin $path)
-
-    # N O D E V E R S I O N M A N A G E R
-    export NVM_DIR="$HOME/.nvm"
-
     # A N D R O I D
     export ANDROID_HOME=/usr/local/opt/android-sdk
 
@@ -86,8 +73,24 @@ else
     # H A S K E L L
     path=($path $HOME/.local/bin)
 
+    # H O M E B R E W
+    export HOMEBREW_GITHUB_API_TOKEN="<insert-key>"
+    path=("${(@)path:#'/usr/local/bin'}")
+    path=("${(@)path:#'/opt/X11/bin'}")
+    path=(/usr/local/bin /usr/local/sbin $path)
+
+    # H U B - https://hub.github.com
+    export GITHUB_USER=trippingtarballs
+    export GITHUB_TOKEN="<insert-key>"
+
+    # N O D E V E R S I O N M A N A G E R
+    export NVM_DIR="$HOME/.nvm"
+
     # O P A M (OCaml pkg manager)
     # source ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+    # G N U P R I V A C Y G U A R D
+    export GPG_TTY=$(tty)
 
     # load libraries
     source ~/Code/personal/zdot/alias.zsh
