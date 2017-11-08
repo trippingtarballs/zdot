@@ -1,6 +1,16 @@
 [user]
     name = Rajiv Bose
     email = 2758507+trippingtarballs@users.noreply.github.com
+    signingkey = F4A9C3A0DCBCF1E1
+[github]
+    user = trippingtarballs
+
+[alias]
+    log-compact = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+    log-verbose = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+    serve = daemon --verbose --export-all --base-path=.git --enable=upload-archive --enable=receive-pack --reuseaddr --strict-paths .git/
+    url = config --get remote.origin.url
+    branchauthors = "git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
 
 [color]
     ui = auto
@@ -28,17 +38,13 @@
 [credential]
     helper = osxkeychain
 
-[github]
-    user = trippingtarballs
-
-[alias]
-    log-compact = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-    log-verbose = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
-    serve = daemon --verbose --export-all --base-path=.git --enable=upload-archive --enable=receive-pack --reuseaddr --strict-paths .git/
-    url = config --get remote.origin.url
-    branchauthors = "git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
-
 [push]
     default = simple
 
+[commit]
+    gpgsign = true
+[tag]
+    gpgsign = true
+[gpg]
+    program = /usr/local/bin/gpg
 # EOF

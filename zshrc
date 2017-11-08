@@ -23,7 +23,13 @@ export SAVEHIST=100000
 # upgrade_oh_my_zsh
 
 # load zgen
-source ~/Code/personal/zgen/zgen.zsh
+if [[ ! -e ~/Code/personal/zgen/zgen.zsh ]]
+then
+    printf "Unable to locate file: ~/Code/personal/zgen/zgen.zsh"
+    return
+else
+    source ~/Code/personal/zgen/zgen.zsh
+fi
 
 # check if there's no init script
 if ! zgen saved; then
@@ -61,14 +67,13 @@ else
     export GITHUB_TOKEN="<insert-key>"
 
     # H O M E B R E W
+    export HOMEBREW_GITHUB_API_TOKEN="<insert-key>"
     path=("${(@)path:#'/usr/local/bin'}")
     path=("${(@)path:#'/opt/X11/bin'}")
     path=(/usr/local/bin /usr/local/sbin $path)
-    export HOMEBREW_GITHUB_API_TOKEN="<insert-key>"
 
     # N O D E V E R S I O N M A N A G E R
     export NVM_DIR="$HOME/.nvm"
-    alias nvml=". /usr/local/opt/nvm/nvm.sh"
 
     # A N D R O I D
     export ANDROID_HOME=/usr/local/opt/android-sdk

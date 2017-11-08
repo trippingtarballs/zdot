@@ -93,6 +93,11 @@ gcloudl () {
     source '~/.gcloud-sdk/completion.zsh.inc' # command completion
 }
 
+nvml () {
+    # N O D E V E R S I O N M A N A G E R
+    source /usr/local/opt/nvm/nvm.sh
+}
+
 # opaml () {
 #     . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 # }
