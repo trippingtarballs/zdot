@@ -1,0 +1,16 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# project required
+
+# project generated
+
+# IDE generated
+.idea
+.vscode
+[#]*[#]
+*.sublime-project
+*.sublime-workspace
+
+# OS generated
+.DS_Store
+*~
