@@ -37,7 +37,7 @@ local nvm_info='$(nodeversion 2> /dev/null)'
 # Prompt format: \n # (node:VERSION) USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-(${nvm_info}) \
+(%{$fg[blue]%}${nvm_info}%{$reset_color%}) \
 %{$fg[cyan]%}%n \
 %{$fg[white]%}at \
 %{$fg[green]%}$(box_name) \
