@@ -25,7 +25,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="$YS_VCS_PROMPT_DIRTY"
 ZSH_THEME_GIT_PROMPT_CLEAN="$YS_VCS_PROMPT_CLEAN"
 
 # NVM info.
-local nvm_info='$(nvm_prompt_info)'
+local nvm_info='$(nvm_version)'
 
 # Prompt format: \n # (node:VERSION) USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
