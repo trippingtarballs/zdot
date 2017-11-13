@@ -29,7 +29,7 @@ function nodeversion {
     if command -v nvm_version &> /dev/null; then
         echo "%{$terminfo[bold]%}$(nvm_version 2> /dev/null)%{$reset_color%}"
     else
-        echo "%{$terminfo[bold]%}$(node --version 2> /dev/null)%{$reset_color%}"
+        echo "$(node --version 2> /dev/null)"
     fi
 }
 local nvm_info='$(nodeversion 2> /dev/null)'
