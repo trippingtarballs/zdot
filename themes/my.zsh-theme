@@ -25,13 +25,12 @@ ZSH_THEME_GIT_PROMPT_DIRTY="$YS_VCS_PROMPT_DIRTY"
 ZSH_THEME_GIT_PROMPT_CLEAN="$YS_VCS_PROMPT_CLEAN"
 
 # NVM info.
-function nvm_info {
-    if command -v nvm_version &> /dev/null; then
-        echo "$(nvm_version 2> /dev/null)*"
-    else
-        echo "$(node --version 2> /dev/null)"
-    fi
-}
+local nvm_info
+if command -v nvm_version &> /dev/null; then
+    nvm_info="$(nvm_version 2> /dev/null)*"
+else
+    nvm_info="$(node --version 2> /dev/null)"
+fi
 
 # Prompt format: \n # (node:VERSION) USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
