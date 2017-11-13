@@ -31,7 +31,7 @@ function nodeversion {
     elif command -v node &> /dev/null; then
         echo "$(node --version 2> /dev/null)"
     else
-        echo "-"
+        echo "--"
     fi
 }
 local nvm_info='$(nodeversion 2> /dev/null)'
