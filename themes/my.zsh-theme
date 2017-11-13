@@ -27,9 +27,9 @@ ZSH_THEME_GIT_PROMPT_CLEAN="$YS_VCS_PROMPT_CLEAN"
 # NVM info.
 function nodeversion {
     if command -v nvm_version &> /dev/null; then
-        echo "$(nvm_version 2> /dev/null)*"
+        echo "%{$terminfo[bold]%}$(nvm_version 2> /dev/null)%{$reset_color%}"
     else
-        echo "$(node --version 2> /dev/null)"
+        echo "%{$terminfo[bold]%}$(node --version 2> /dev/null)%{$reset_color%}"
     fi
 }
 local nvm_info='$(nodeversion 2> /dev/null)'
