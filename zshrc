@@ -39,7 +39,7 @@ if ! zgen saved; then
 
     # plugins
     zgen oh-my-zsh plugins/colored-man-pages
-    # zgen oh-my-zsh plugins/docker
+    zgen oh-my-zsh plugins/docker
     # zgen oh-my-zsh plugins/docker-compose
     zgen oh-my-zsh plugins/git
     # zgen oh-my-zsh plugins/nvm
@@ -66,12 +66,15 @@ else
     export ANDROID_HOME=/usr/local/opt/android-sdk
 
     # G O L A N G
-    # export GOPATH=$HOME/.golang
-    # export GOROOT=/usr/local/opt/go/libexec
-    # path=($path $GOPATH/bin $GOROOT/bin)
+    export GOPATH=$HOME/.golang
+    export GOROOT=/usr/local/opt/go/libexec
+    path=($path $GOPATH/bin $GOROOT/bin)
 
-    # H A S K E L L
+    # H A S K E L L (S T A C K)
     path=($path $HOME/.local/bin)
+    autoload -U +X compinit && compinit
+    autoload -U +X bashcompinit && bashcompinit
+    eval "$(stack --bash-completion-script stack)"
 
     # H O M E B R E W
     export HOMEBREW_GITHUB_API_TOKEN="<insert-key>"
