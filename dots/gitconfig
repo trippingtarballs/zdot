@@ -11,9 +11,10 @@
     log-verbose = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
     serve = daemon --verbose --export-all --base-path=.git --enable=upload-archive --enable=receive-pack --reuseaddr --strict-paths .git/
     url = remote get-url origin
+    stll = "!git --no-pager stash list"
 
-[diff]
-    wsErrorHighlight = all
+##### General Settings
+######################
 
 [color]
     ui = auto
@@ -21,6 +22,7 @@
     current = yellow bold
     local = green bold
     remote = cyan bold
+# upstream = magenta bold
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
@@ -41,8 +43,21 @@
 [credential]
     helper = osxkeychain
 
+[diff]
+    wsErrorHighlight = all
+    submodule = log
+
+[pager]
+    branch = false
+    stash = false
+    tag = false
+
 [push]
     default = simple
+
+
+##### Commit Signing
+####################
 
 [commit]
     gpgsign = true
@@ -50,4 +65,5 @@
     gpgsign = true
 [gpg]
     program = /usr/local/bin/gpg
+
 # EOF

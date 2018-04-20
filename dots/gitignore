@@ -21,6 +21,7 @@ npm-debug.log
 .ant-targets-build.xml
 .ant_targets
 [#]*[#]
+*.iml
 *.sublime-project
 *.sublime-workspace
 .vscode

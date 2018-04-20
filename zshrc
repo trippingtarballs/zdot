@@ -23,12 +23,12 @@ export SAVEHIST=100000
 # upgrade_oh_my_zsh
 
 # load zgen
-if [[ ! -e ~/Code/personal/zgen/zgen.zsh ]]
+if [[ ! -e $HOME/Code/personal/zgen/zgen.zsh ]]
 then
-    printf "Unable to locate file: ~/Code/personal/zgen/zgen.zsh"
+    printf "Unable to locate file: $HOME/Code/personal/zgen/zgen.zsh"
     return
 else
-    source ~/Code/personal/zgen/zgen.zsh
+    source $HOME/Code/personal/zgen/zgen.zsh
 fi
 
 # check if there's no init script
@@ -42,6 +42,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/docker
     # zgen oh-my-zsh plugins/docker-compose
     zgen oh-my-zsh plugins/git
+    # zgen oh-my-zsh plugins/gpg-agent
     # zgen oh-my-zsh plugins/nvm
     # zgen oh-my-zsh plugins/pip
     # zgen oh-my-zsh plugins/virtualenvwrapper
@@ -65,18 +66,27 @@ else
     # A N D R O I D
     export ANDROID_HOME=/usr/local/opt/android-sdk
 
+    # https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b
+    # G N U P R I V A C Y G U A R D
+    if [ -n "$(pgrep gpg-agent)" ]; then
+        export GPG_AGENT_INFO
+    else
+        eval $(gpg-agent --daemon --options $HOME/.gnupg/gpg-agent.conf)
+    fi
+
     # G O L A N G
     export GOPATH=$HOME/.golang
     export GOROOT=/usr/local/opt/go/libexec
     path=($path $GOPATH/bin $GOROOT/bin)
 
     # H A S K E L L (S T A C K)
-    path=($path $HOME/.local/bin)
+    # path=($path $HOME/.local/bin)
     autoload -U +X compinit && compinit
     autoload -U +X bashcompinit && bashcompinit
     eval "$(stack --bash-completion-script stack)"
 
     # H O M E B R E W
+    export HOMEBREW_NO_AUTO_UPDATE=1
     export HOMEBREW_GITHUB_API_TOKEN="<insert-key>"
     path=("${(@)path:#'/usr/local/bin'}")
     path=("${(@)path:#'/opt/X11/bin'}")
@@ -86,19 +96,13 @@ else
     export GITHUB_USER=trippingtarballs
     export GITHUB_TOKEN="<insert-key>"
 
-    # N O D E V E R S I O N M A N A G E R
-    export NVM_DIR="$HOME/.nvm"
-
     # O P A M (OCaml pkg manager)
-    # source ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-    # G N U P R I V A C Y G U A R D
-    export GPG_TTY=$(tty)
+    # source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
     # load libraries
-    source ~/Code/personal/zdot/alias.zsh
-    source ~/Code/personal/zdot/devel.zsh
-    source ~/Code/personal/zdot/funcs.zsh
+    source $HOME/Code/personal/zdot/alias.zsh
+    source $HOME/Code/personal/zdot/devel.zsh
+    source $HOME/Code/personal/zdot/funcs.zsh
 fi
 
 # EOF

@@ -23,9 +23,14 @@ alias yt="youtube-dl --format mp4"
 alias yti="youtube-dl --format mp4 --output \"%(autonumber)s-%(title)s.%(ext)s\""
 alias yta="yt --extract-audio --audio-quality 0"
 
+# npm related ...
+alias npxu="npx npm-check-updates"
+# ncu --filter "/^(?\!webpack).+/"
 
-# git releated ...
+# git related ...
 alias gbv="gb -vv"
 alias gbdd="gb -D"
 alias ggpu="gp -u"
+# alias gtss="git tag | tail -1"
+alias gtss="git log --tags --decorate --simplify-by-decoration --oneline"
 # alias gbd="gbv --no-color | awk '/: gone]/{print $1}' | xargs git branch -D"
