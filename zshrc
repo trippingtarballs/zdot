@@ -43,6 +43,7 @@ if ! zgen saved; then
     # zgen oh-my-zsh plugins/docker-compose
     zgen oh-my-zsh plugins/git
     # zgen oh-my-zsh plugins/gpg-agent
+    zgen oh-my-zsh plugins/npm
     # zgen oh-my-zsh plugins/nvm
     # zgen oh-my-zsh plugins/pip
     # zgen oh-my-zsh plugins/virtualenvwrapper

@@ -2,7 +2,7 @@
 
 f () {
     # look for file by name
-    sudo find -x . -not -path "*/.MobileBackups/*" -not -path "*/node_modules/*" -not -path "*/private/*" -name "$1"
+    sudo find -x . -not -path "*/.MobileBackups/*" -not -path "*/node_modules/*" -not -path "*/private/var/*" -name "$1"
 }
 f-broken () {
     # look for broken symlinks

@@ -5,7 +5,7 @@
 :set prompt "\ESC[34m\STX%s > \ESC[m\STX"
 
 -- warning for partial functions
-:set -Wall
+-- :set -Wall
 
 -- more polymorphic function signatures
 :set -XNoMonomorphismRestriction

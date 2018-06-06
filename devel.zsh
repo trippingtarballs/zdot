@@ -123,6 +123,8 @@ excelsior-rebuild-hs () {
     stack exec code-gen
     cd frontend
     npm install
+    npm run build
+    cd ../
 }
 
 excelsior-everything () {
@@ -222,6 +224,7 @@ je () {
 jef () {
     je
     cd frontend
+    npm run start
 }
 
 # stack build --verbosity warn --fast --ghc-options=-Werror
