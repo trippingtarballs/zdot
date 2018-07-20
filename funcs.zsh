@@ -18,6 +18,27 @@ feed-me () {
     (alias | cut -f1 -d= ; hash -f; hash -v | cut -f 1 -d= ; typeset +f) | sort
 }
 
+# $ egghead https://egghead.io/courses/state-monad-in-javascript
+egghead () {
+  curl -sL "$1" \
+  | grep -o -e 'https://[^"]*.m3u8' \
+  | cat -n \
+  | while read number file; do youtube-dl -o "$(printf "%02d" $number)-%(title)s.%(ext)s" $file; done
+}
+
+# `$ offline-site www.contentful.com/developers/docs/concepts`
+offline-site () {
+  wget \
+    --recursive \
+    --no-clobber \
+    --page-requisites \
+    --html-extension \
+    --convert-links \
+    --restrict-file-names=windows \
+    --domains contentful.com \
+    --no-parent "$1"
+}
+
 
 # "you know, for the times when you complete the internet and want to get more into it"
 matrix () {
