@@ -20,7 +20,6 @@
     current = yellow bold
     local = green bold
     remote = cyan bold
-# upstream = magenta bold
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
@@ -33,7 +32,8 @@
     untracked = red bold
 
 [core]
-    editor = emacs
+    # editor = emacs
+    editor = 'subl' --wait
     excludesfile = ~/.gitignore
     autocrlf = false
     safecrlf = true
