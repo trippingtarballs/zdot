@@ -25,7 +25,8 @@ alias yti="youtube-dl --ignore-errors --format mp4 --output \"%(autonumber)s-%(t
 alias yta="yt --extract-audio --audio-quality 0"
 
 # npm related ...
-alias npmDD="npm install --save-dev --save-exact --no-shrinkwrap"
+alias npmsd="npm install --save-exact --no-shrinkwrap --save-dev"
+alias npmss="npm install --save-exact --no-shrinkwrap --save"
 alias npxu="npx npm-check-updates"
 # ncu --filter "/^(?\!webpack).+/"
 
