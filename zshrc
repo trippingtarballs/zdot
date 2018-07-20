@@ -69,11 +69,11 @@ else
 
     # https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b
     # G N U P R I V A C Y G U A R D
-    if [ -n "$(pgrep gpg-agent)" ]; then
-        export GPG_AGENT_INFO
-    else
-        eval $(gpg-agent --daemon --options $HOME/.gnupg/gpg-agent.conf)
-    fi
+    # if [ -n "$(pgrep gpg-agent)" ]; then
+    #     export GPG_AGENT_INFO
+    # else
+    #     eval $(gpg-agent --daemon --options $HOME/.gnupg/gpg-agent.conf)
+    # fi
 
     # G O L A N G
     export GOPATH=$HOME/.golang
@@ -81,10 +81,10 @@ else
     path=($path $GOPATH/bin $GOROOT/bin)
 
     # H A S K E L L (S T A C K)
-    # path=($path $HOME/.local/bin)
-    autoload -U +X compinit && compinit
-    autoload -U +X bashcompinit && bashcompinit
-    eval "$(stack --bash-completion-script stack)"
+    ## path=($path $HOME/.local/bin)
+    # autoload -U +X compinit && compinit
+    # autoload -U +X bashcompinit && bashcompinit
+    # eval "$(stack --bash-completion-script stack)"
 
     # H O M E B R E W
     export HOMEBREW_NO_AUTO_UPDATE=1

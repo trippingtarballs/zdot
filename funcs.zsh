@@ -136,11 +136,7 @@ git-clean () {
 awsl () {
     # A M A Z O N W E B S E R V I C E S
     source /usr/local/share/zsh/site-functions/_aws
-    export AWS_DEFAULT_PROFILE=arcadia.digital
-
-    # ssh-shotcuts
-    alias ssh-arcadia-digital="ssh -i ~/.ssh/pems/arcadia-digital-bastion ec2-user@ec2-52-57-78-247.eu-central-1.compute.amazonaws.com"
-
+    export AWS_DEFAULT_PROFILE=lesbose.dev
 }
 
 gcloudl () {
