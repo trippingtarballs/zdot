@@ -2,6 +2,8 @@
     name = Rajiv Bose
     email = 2758507+trippingtarballs@users.noreply.github.com
     signingkey = 4A60EB85
+[github]
+    user = trippingtarballs
 
 [alias]
     branchauthors = "git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
@@ -20,6 +22,7 @@
     current = yellow bold
     local = green bold
     remote = cyan bold
+# upstream = magenta bold
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
@@ -33,7 +36,7 @@
 
 [core]
     # editor = emacs
-    editor = 'subl' --wait
+    editor = 'subl' --new-window --wait
     excludesfile = ~/.gitignore
     autocrlf = false
     safecrlf = true

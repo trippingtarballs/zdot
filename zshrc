@@ -11,6 +11,7 @@
 #   zsh -i -c exit  0.12s user 0.12s system 91% cpu 0.267 total # with nvm
 #   zsh -i -c exit  0.12s user 0.10s system 95% cpu 0.237 total # without nvm
 #   zsh -i -c exit  0.13s user 0.11s system 93% cpu 0.256 total # with opam
+#   zsh -i -c exit  0.10s user 0.06s system 88% cpu 0.180 total
 
 
 # OH MY ZSH
@@ -38,12 +39,14 @@ if ! zgen saved; then
     zgen oh-my-zsh
 
     # plugins
+    # zgen oh-my-zsh plugins/aws
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/docker
     # zgen oh-my-zsh plugins/docker-compose
     zgen oh-my-zsh plugins/git
     # zgen oh-my-zsh plugins/gpg-agent
-    zgen oh-my-zsh plugins/npm
+    # zgen oh-my-zsh plugins/nomad
+    # zgen oh-my-zsh plugins/npm
     # zgen oh-my-zsh plugins/nvm
     # zgen oh-my-zsh plugins/pip
     # zgen oh-my-zsh plugins/virtualenvwrapper
@@ -53,6 +56,7 @@ if ! zgen saved; then
     # zgen load trippingtarballs/zdot plugins/docker
     # zgen load trippingtarballs/zdot plugins/docker-compose
     # zgen load trippingtarballs/zdot plugins/docker-machine
+    zgen load spwhitt/nix-zsh-completions
 
     # theme
     zgen load trippingtarballs/zdot themes/my
@@ -65,26 +69,28 @@ else
     export LANG=en_GB.UTF-8
 
     # A N D R O I D
-    export ANDROID_HOME=/usr/local/opt/android-sdk
+    # export ANDROID_HOME=$HOME/Library/Android/sdk/
+    # export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+    # export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'`
+    # F L U T T E R
+    # export FLUTTER_HOME=/usr/local/share/flutter
 
-    # https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b
+    # B A T
+    # https://github.com/sharkdp/bat#configuration-file
+    export BAT_CONFIG_PATH=/Users/maverick/Code/personal/zdot/dots/bat.conf
+
     # G N U P R I V A C Y G U A R D
-    # if [ -n "$(pgrep gpg-agent)" ]; then
-    #     export GPG_AGENT_INFO
-    # else
-    #     eval $(gpg-agent --daemon --options $HOME/.gnupg/gpg-agent.conf)
-    # fi
+    # https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b
+    if [ -n "$(pgrep gpg-agent)" ]; then
+        export GPG_AGENT_INFO
+    else
+        eval $(gpg-agent --daemon --options $HOME/.gnupg/gpg-agent.conf)
+    fi
 
     # G O L A N G
-    export GOPATH=$HOME/.golang
-    export GOROOT=/usr/local/opt/go/libexec
-    path=($path $GOPATH/bin $GOROOT/bin)
-
-    # H A S K E L L (S T A C K)
-    ## path=($path $HOME/.local/bin)
-    # autoload -U +X compinit && compinit
-    # autoload -U +X bashcompinit && bashcompinit
-    # eval "$(stack --bash-completion-script stack)"
+    # export GOPATH=$HOME/.golang
+    # export GOROOT=/usr/local/opt/go/libexec
+    # path=($path $GOPATH/bin $GOROOT/bin)
 
     # H O M E B R E W
     export HOMEBREW_NO_AUTO_UPDATE=1

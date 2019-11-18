@@ -1,5 +1,10 @@
 flags: {}
 extra-package-dbs: []
 packages: []
-extra-deps: []
-resolver: ghc-8.2.1
+extra-deps: [
+  # ghc-mod
+  # , hindent
+  # , hlint
+  # , stylish-haskell
+]
+resolver: lts-14.5
