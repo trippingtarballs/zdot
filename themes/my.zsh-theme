@@ -8,7 +8,7 @@ function box_name {
 }
 
 # Directory info.
-local current_dir='${PWD/#$HOME/~}%'
+# local current_dir='${PWD/#$HOME/~}%'
 local current_dir='${PWD##*/}%'
 
 # VCS info.
@@ -45,7 +45,7 @@ PROMPT="
 %{$fg[white]%}at \
 %{$fg[green]%}$(box_name) \
 %{$fg[white]%}in \
-  %{$terminfo[bold]$fg[yellow]%}${current_dir}{$reset_color%}\
+%{$terminfo[bold]$fg[yellow]%}${current_dir}{$reset_color%}\
 ${hg_info}\
 ${git_info} \
 %{$fg[white]%}[%*]
